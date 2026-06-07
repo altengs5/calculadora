@@ -1,20 +1,197 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mais uma tarefa ai</title>
+    <title>Calculadora</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #1e293b,
+                #334155
+            );
+        }
+
+        .calculadora {
+            width: 400px;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(10px);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            box-shadow:
+                0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 14px;
+
+            margin-bottom: 15px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: rgba(255,255,255,0.1);
+
+            color: white;
+
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #cbd5e1;
+        }
+
+        .acoes {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+        button {
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+        }
+
+        .somar {
+            background: #22c55e;
+        }
+
+        .subtrair {
+            background: #ef4444;
+        }
+
+        .multiplicar {
+            background: #3b82f6;
+        }
+
+        .dividir {
+            background: #f59e0b;
+        }
+
+        .resultado {
+            margin-top: 20px;
+
+            padding: 15px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            background: rgba(255,255,255,0.08);
+
+            color: white;
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <input type="number" class="input1" id="nu1">
-    <input type="number" class="input2" id="nu2">
-    <button onclick="subtrair()">-</button>
-    <button onclick="somar()">+</button>
-    <button onclick="dividir()">÷</button>
-    <button onclick="multiplicar()">x</button>
+
+    <div class="calculadora">
+
+        <h1>🧮 Calculadora</h1>
+
+        <p class="subtitulo">
+            Escolha uma operação matemática
+        </p>
+
+        <input
+            id="numero1"
+            type="number"
+            placeholder="Primeiro número"
+        >
+
+        <input
+            id="numero2"
+            type="number"
+            placeholder="Segundo número"
+        >
+
+        <div class="acoes">
+
+            <button class="somar" onclick="somar()">
+                Somar
+            </button>
+
+            
+
+        </div>
+
+        <div class="resultado">
+            Resultado: 0
+        </div>
+
+    </div>
+<script>
+    function somar() {
+    let numero1 = document.getElementById("numero1").value
+    let numero2 = document.getElementById("numero2").Value
+    let calculadora = numero1 + numero2
+    alert ("Resultado = " + calculadora)
+    }
+</script>
+    
+
 </body>
-<script src="script.js"></script>
 
 </html>
