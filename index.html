@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,12 +21,10 @@
             justify-content: center;
             align-items: center;
 
-            background: linear-gradient(
-                135deg,
-                #0f172a,
-                #1e293b,
-                #334155
-            );
+            background: linear-gradient(135deg,
+                    #0f172a,
+                    #1e293b,
+                    #334155);
         }
 
         .calculadora {
@@ -37,14 +34,14 @@
 
             border-radius: 20px;
 
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
 
             backdrop-filter: blur(10px);
 
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
 
             box-shadow:
-                0 20px 40px rgba(0,0,0,0.3);
+                0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
@@ -69,7 +66,7 @@
             border: none;
             border-radius: 12px;
 
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
 
             color: white;
 
@@ -134,7 +131,7 @@
 
             border-radius: 12px;
 
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
 
             color: white;
 
@@ -155,25 +152,24 @@
             Escolha uma operação matemática
         </p>
 
-        <input
-            id="numero1"
-            type="number"
-            placeholder="Primeiro número"
-        >
+        <input id="numero1" type="number" placeholder="Primeiro número">
 
-        <input
-            id="numero2"
-            type="number"
-            placeholder="Segundo número"
-        >
+        <input id="numero2" type="number" placeholder="Segundo número">
 
         <div class="acoes">
 
             <button class="somar" onclick="somar()">
                 Somar
             </button>
-
-            
+            <button class="multiplicar" onclick="multiplicar()">
+                multiplicar
+            </button>
+            <button class="dividir" onclick="dividir()">
+                dividir
+            </button>
+            <button class="subtrair" onclick="subtrair()">
+                subtrair
+            </button>
 
         </div>
 
@@ -182,15 +178,33 @@
         </div>
 
     </div>
-<script>
-    function somar() {
-    let numero1 = document.getElementById("numero1").value
-    let numero2 = document.getElementById("numero2").Value
-    let calculadora = numero1 + numero2
-    alert ("Resultado = " + calculadora)
-    }
-</script>
-    
+    <script>
+        function somar() {
+            let numero1 = Number(document.getElementById("numero1").value);
+            let numero2 = Number(document.getElementById("numero2").value)
+            let calculadora = numero1 + numero2
+            alert("Resultado = " + calculadora)
+        }
+        function multiplicar() {
+            let numero1 = Number(document.getElementById("numero1").value);
+            let numero2 = Number(document.getElementById("numero2").value)
+            let calculadora = numero1 * numero2
+            alert("Resultado = " + calculadora)
+        }
+        function dividir() {
+            let numero1 = Number(document.getElementById("numero1").value);
+            let numero2 = Number(document.getElementById("numero2").value)
+            let calculadora = numero1 / numero2
+            alert("Resultado = " + calculadora)
+        }
+         function subtrair() {
+            let numero1 = Number(document.getElementById("numero1").value);
+            let numero2 = Number(document.getElementById("numero2").value)
+            let calculadora = numero1 - numero2
+            alert("Resultado = " + calculadora)
+        }
+    </script>
+
 
 </body>
 
